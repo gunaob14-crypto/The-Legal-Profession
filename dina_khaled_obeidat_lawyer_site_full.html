@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مكتب المحامية الشرعية دينا خالد عبيدات في الأردن - استشارات وقضايا الأحوال الشخصية.">
+  <title>المحامية دينا خالد عبيدات | قضايا الأحوال الشخصية</title>
+  <style>
+    :root {
+      --navy: #101d32;
+      --navy-light: #192b46;
+      --gold: #c9a45c;
+      --gold-light: #ead6a5;
+      --cream: #f7f4ed;
+      --white: #fff;
+      --ink: #202838;
+      --muted: #657084;
+      --border: #e7e1d5;
+      --green: #198754;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.9;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 3px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 22px;
+      padding: 12px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark {
+      width: 44px; height: 44px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      color: var(--gold-light);
+      font-size: 23px;
+      flex: 0 0 auto;
+    }
+    .brand-name { font-size: 17px; font-weight: bold; }
+    .brand-sub { color: #d4d9e2; font-size: 12px; }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav a { color: #f3f0e8; text-decoration: none; font-size: 14px; }
+    nav a:hover { color: var(--gold-light); }
+
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(201,164,92,.15), transparent 32%),
+        linear-gradient(135deg, var(--navy), #1b2d48);
+      color: var(--white);
+      padding: 88px 0 82px;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: 44px;
+    }
+    .eyebrow { color: var(--gold-light); font-size: 14px; font-weight: bold; letter-spacing: .3px; }
+    h1 { font-size: clamp(30px, 4.4vw, 52px); line-height: 1.45; margin: 14px 0; }
+    .hero p { color: #e1e6ee; font-size: 17px; max-width: 650px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-flex; justify-content: center; align-items: center;
+      text-decoration: none; border-radius: 8px; padding: 12px 20px;
+      font-weight: bold; transition: transform .2s, opacity .2s;
+    }
+    .button:hover { transform: translateY(-2px); opacity: .92; }
+    .button-gold { background: var(--gold); color: #171d27; }
+    .button-outline { border: 1px solid var(--gold); color: var(--gold-light); }
+    .hero-seal {
+      width: min(290px, 100%); aspect-ratio: 1; margin: auto;
+      border: 1px solid rgba(234,214,165,.65); border-radius: 50%;
+      display: grid; place-items: center; position: relative;
+      box-shadow: 0 0 0 15px rgba(201,164,92,.05), 0 0 0 30px rgba(201,164,92,.025);
+    }
+    .hero-seal::before {
+      content: ""; position: absolute; inset: 18px; border: 1px solid rgba(234,214,165,.35); border-radius: 50%;
+    }
+    .seal-content { text-align: center; padding: 20px; }
+    .seal-icon { color: var(--gold-light); font-size: 64px; line-height: 1.2; }
+    .seal-title { color: var(--gold-light); font-size: 21px; font-weight: bold; }
+    .seal-caption { color: #e1e6ee; font-size: 13px; }
+
+    section { padding: 72px 0; }
+    .section-heading { text-align: center; max-width: 740px; margin: 0 auto 38px; }
+    .section-heading .eyebrow { color: #9b7937; }
+    h2 { color: var(--navy); font-size: clamp(25px, 3vw, 35px); margin: 8px 0 12px; }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 25px 23px;
+      box-shadow: 0 8px 24px rgba(16,29,50,.04);
+    }
+    .service-icon {
+      width: 48px; height: 48px; display: grid; place-items: center;
+      background: #f4ecd9; border-radius: 10px; color: #87682b; font-size: 23px;
+    }
+    .service-card h3 { color: var(--navy); margin: 15px 0 7px; font-size: 19px; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .about { background: #fff; }
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 42px; align-items: center; }
+    .about-panel {
+      background: var(--navy); color: white; border-radius: 14px;
+      padding: 32px; border-bottom: 4px solid var(--gold);
+    }
+    .about-panel .big-mark { color: var(--gold-light); font-size: 48px; }
+    .about-panel h3 { margin: 4px 0 8px; font-size: 23px; }
+    .about-panel p { color: #dce2eb; margin-bottom: 0; }
+    .about-copy p { color: var(--muted); }
+    .values { padding: 0; list-style: none; display: grid; gap: 10px; }
+    .values li::before { content: "✓"; color: #9b7937; font-weight: bold; margin-left: 10px; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .step { border-top: 2px solid var(--gold); background: #fff; padding: 22px; border-radius: 8px; }
+    .step-number { color: #a17c34; font-weight: bold; font-size: 13px; }
+    .step h3 { color: var(--navy); margin: 6px 0; }
+    .step p { color: var(--muted); font-size: 14px; margin: 0; }
+
+    .contact { background: var(--navy); color: white; }
+    .contact .section-heading h2 { color: white; }
+    .contact .section-heading p { color: #d6deea; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+    .contact-info, .contact-card { border: 1px solid rgba(234,214,165,.25); border-radius: 12px; padding: 28px; }
+    .contact-info h3, .contact-card h3 { margin-top: 0; color: var(--gold-light); }
+    .contact-info p { color: #d6deea; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .whatsapp { background: var(--green); color: white; }
+    .call { background: var(--gold); color: #172033; }
+    .contact-card { background: rgba(255,255,255,.04); }
+    .contact-card p { color: #d6deea; font-size: 14px; }
+    .contact-note { font-size: 12px !important; color: #b9c3d2 !important; }
+
+    footer { background: #0b1424; color: #cbd2dc; padding: 22px 0; font-size: 12px; text-align: center; }
+    footer p { margin: 4px 0; }
+
+    @media (max-width: 800px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      nav { gap: 10px 16px; }
+      .hero { padding: 58px 0; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-seal { width: 220px; margin-top: 10px; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .services { grid-template-columns: 1fr; }
+      .hero-actions, .contact-links { flex-direction: column; }
+      .button { width: 100%; }
+      section { padding: 54px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">⚖</div>
+        <div>
+          <div class="brand-name">المحامية دينا خالد عبيدات</div>
+          <div class="brand-sub">قضايا الأحوال الشخصية والشرعية — الأردن</div>
+        </div>
+      </div>
+      <nav aria-label="القائمة الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#about">عن المكتب</a>
+        <a href="#steps">آلية العمل</a>
+        <a href="#contact">تواصلي معنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">استشارات قانونية في قضايا الأحوال الشخصية</div>
+          <h1>حقوقكِ تستحق أن تُفهم<br>وأن تُصان بالقانون</h1>
+          <p>المحامية دينا خالد عبيدات — متابعة قضايا الأحوال الشخصية والشرعية في الأردن، مع الحرص على الخصوصية وشرح الخيارات القانونية بوضوح.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#contact">احجزي استشارة</a>
+            <a class="button button-outline" href="#services">تعرّفي على الخدمات</a>
+          </div>
+        </div>
+        <div class="hero-seal" aria-label="ميزان العدالة">
+          <div class="seal-content">
+            <div class="seal-icon" aria-hidden="true">⚖</div>
+            <div class="seal-title">العدل والحقوق</div>
+            <div class="seal-caption">وضوح • خصوصية • اهتمام</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">خدمات المكتب</div>
+          <h2>مجالات المساعدة القانونية</h2>
+          <p>تعرّفي على مجالات العمل، وتواصلي لبحث تفاصيل الحالة والإجراءات المناسبة وفق القانون الأردني.</p>
+        </div>
+        <div class="services">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">⚖</div>
+            <h3>الطلاق والتفريق</h3>
+            <p>توضيح الإجراءات والخيارات القانونية المتعلقة بقضايا الطلاق والتفريق وفق الحالة.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">◇</div>
+            <h3>النفقة</h3>
+            <p>المساعدة في فهم المطالبات والإجراءات المرتبطة بالنفقة والحقوق المالية ذات الصلة.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">⌂</div>
+            <h3>الحضانة والرؤية</h3>
+            <p>بحث المسائل المتعلقة بالحضانة والرؤية والزيارة ومصلحة الطفل ضمن الأطر القانونية.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">✧</div>
+            <h3>المهر والحقوق الزوجية</h3>
+            <p>استشارات حول المهر والحقوق الزوجية والمطالبات المرتبطة بها.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">§</div>
+            <h3>استشارات الأحوال الشخصية</h3>
+            <p>شرح المسائل القانونية والإجراءات والوثائق التي قد تحتاجين إليها بحسب تفاصيل الموضوع.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">▤</div>
+            <h3>متابعة الإجراءات</h3>
+            <p>تنظيم الخطوات والمستندات اللازمة ومتابعة القضية بحسب الاتفاق والإجراءات المتاحة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <div class="big-mark" aria-hidden="true">⚖</div>
+          <h3>المحامية دينا خالد عبيدات</h3>
+          <p>قضايا الأحوال الشخصية والشرعية في الأردن</p>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">عن المكتب</div>
+          <h2>اهتمام بالتفاصيل ووضوح في الخطوات</h2>
+          <p>يهدف المكتب إلى مساعدة المراجعين على فهم خياراتهم القانونية، ومعرفة الإجراءات المتوقعة، والاستعداد بالمعلومات والوثائق ذات الصلة قبل اتخاذ القرار.</p>
+          <ul class="values">
+            <li>شرح واضح للمعلومات والإجراءات القانونية.</li>
+            <li>الاهتمام بخصوصية المعلومات المقدمة.</li>
+            <li>تحديد الخطوات التالية وفق تفاصيل كل حالة.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">آلية التواصل</div>
+          <h2>كيف تبدئين؟</h2>
+          <p>خطوات أولية بسيطة لبدء التواصل ومناقشة الاستشارة.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">الخطوة الأولى</div>
+            <h3>تواصلي مع المكتب</h3>
+            <p>اختاري واتساب أو الاتصال المباشر من بيانات التواصل أدناه.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">الخطوة الثانية</div>
+            <h3>اشرحي موضوع الاستشارة</h3>
+            <p>اذكري ملخصًا عامًا للموضوع، وتجنبي إرسال معلومات شديدة الحساسية قبل الاتفاق على طريقة التواصل المناسبة.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">الخطوة الثالثة</div>
+            <h3>تعرّفي على الخطوات التالية</h3>
+            <p>يُبحث معك ما يلزم من معلومات ووثائق والإجراءات المحتملة بحسب الحالة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">تواصلي معنا</div>
+          <h2>لحجز استشارة أو الاستفسار</h2>
+          <p>اختاري وسيلة التواصل المناسبة لكِ.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>المحامية دينا خالد عبيدات</h3>
+            <p>قضايا الأحوال الشخصية والشرعية — الأردن</p>
+            <div class="contact-links">
+              <a class="button whatsapp" id="whatsappLink" href="https://wa.me/9627XXXXXXXX" target="_blank" rel="noopener noreferrer">تواصلي عبر واتساب</a>
+              <a class="button call" id="callLink" href="tel:+9627XXXXXXXX">اتصال مباشر</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3>معلومات مهمة</h3>
+            <p>يرجى التواصل أولًا لتحديد إمكانية الاستشارة وطريقتها والوثائق المطلوبة إن وجدت.</p>
+            <p class="contact-note">هذا الموقع للتعريف بالخدمات ووسائل التواصل، ولا يُعدّ بحد ذاته استشارة قانونية أو ضمانًا لنتيجة قضية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> المحامية دينا خالد عبيدات — جميع الحقوق محفوظة.</p>
+      <p>الأردن | قضايا الأحوال الشخصية والشرعية</p>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      التعديل المطلوب:
+      استبدلي 9627XXXXXXXX برقم واتساب المحامية بصيغة دولية.
+      مثال توضيحي فقط: رقم أردني يبدأ بـ 07 يُكتب عادةً 9627... بعد حذف الصفر الأول.
+      لا تضعي علامة + أو مسافات في officeWhatsApp.
+    */
+    const officeWhatsApp = "9627XXXXXXXX";
+    const officePhone = "+9627XXXXXXXX";
+
+    const whatsappLink = document.getElementById("whatsappLink");
+    const callLink = document.getElementById("callLink");
+
+    whatsappLink.href =
+      "https://wa.me/" + officeWhatsApp +
+      "?text=" + encodeURIComponent("مرحبًا أستاذة دينا، أرغب بالاستفسار عن حجز استشارة قانونية.");
+
+    callLink.href = "tel:" + officePhone;
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
